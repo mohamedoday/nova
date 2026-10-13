@@ -1,0 +1,51 @@
+# Nova 0.2 showcase
+page "Nova - موقعي"
+icon "🚀"
+lang ar
+direction rtl
+theme dark
+font cairo
+gradient #1b769c #203a43 #2c5364 135 animated=yes
+accent #00d4ff
+
+navbar "Nova" "الرئيسية|#top" "المميزات|#features" "تواصل|#contact"
+
+sticker "🚀" size=90 animate=slide-down,float align=center drag=yes
+hero "مرحبا بك في Nova" "لغة برمجة لبناء مواقع انيقة وسلسة بدون تعقيد" id=top glass=yes animate=blur
+space 16
+
+box align=center
+button "ابدأ الان" "#features" inline=yes
+button "GitHub" "https://github.com/mohamedoday/nova" look=outline inline=yes
+button "ثيمات" "#themes" look=soft inline=yes
+end
+
+space 60
+title "المميزات" id=features align=center textgradient=#00d4ff,#7b61ff
+grid 3
+card "الوان" "ثيمات جاهزة وتدرجات لونية وصور خلفية" "🎨"
+card "حركات" "ظهور سلس وتاثيرات متحركة مثل ماك" "✨"
+card "خطوط" "خطوط عربية وانجليزية بسطر واحد" "🔤"
+end
+
+space 60
+title "صور وملصقات" id=themes align=center
+image "https://picsum.photos/900/400" "صورة" radius=28 shadow=big hover=grow animate=zoom align=center
+
+space 20
+box align=center
+sticker "🔥" size=56 animate=pulse inline=yes
+sticker "💎" size=56 animate=float inline=yes delay=0.3
+sticker "⚡" size=56 animate=wiggle inline=yes delay=0.6
+sticker "🎮" size=56 animate=bounce drag=yes inline=yes
+end
+paragraph "جرب تسحب الملصق 🎮 بالماوس او اصبعك" align=center size=16
+
+space 60
+box glass=yes padding=32 radius=28 align=center
+subtitle "تواصل معنا" id=contact
+paragraph "TELEGRAM:VSLLX"
+list "الوان" "صور" "ملصقات" "خطوط" "حركات"
+end
+
+footer "صُنع بلغة Nova ❤"

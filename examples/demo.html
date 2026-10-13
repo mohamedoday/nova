@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova - موقعي</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20100%20100%27%3E%3Ctext%20y%3D%27.9em%27%20font-size%3D%2790%27%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&amp;display=swap">
+<style>:root{color-scheme:dark;--bg:#000000;--text:#f5f5f7;--muted:#a1a1a6;--accent:#00d4ff;--card:rgba(44,44,46,.60);--border:rgba(255,255,255,.12);--font:"Cairo",-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--maxw:980px;}
+:root{--ease:cubic-bezier(.16,1,.3,1);--spring:cubic-bezier(.34,1.56,.64,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;color:var(--text);font-family:var(--font);line-height:1.55;
+-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;animation:pageIn .9s var(--ease) both}
+::selection{background:var(--accent);color:#fff}
+.page{max-width:var(--maxw);margin:0 auto;padding:24px 24px 96px}
+.n{display:block}
+.n.inl{display:inline-block;vertical-align:middle;margin:6px}
+.n[id]{scroll-margin-top:96px}
+h1,h2,h3{font-family:var(--hfont,var(--font));margin:0 0 .4em;letter-spacing:-.02em;line-height:1.1}
+h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:700}
+h2{font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:700}
+h2.sub{font-weight:400;color:var(--muted)}
+h3{font-size:1.3rem;font-weight:700}
+p{margin:0 0 1em;font-size:1.1rem}
+.btn{display:inline-block;font:inherit;font-weight:600;font-size:1rem;padding:.8em 1.7em;
+border:2px solid var(--accent);border-radius:980px;background:var(--accent);color:#fff;
+text-decoration:none;cursor:pointer;transition:transform .45s var(--spring),box-shadow .45s var(--ease),filter .3s}
+.btn:hover{transform:scale(1.05);filter:brightness(1.1)}
+.btn:active{transform:scale(.96)}
+.btn-outline{background:transparent;color:var(--accent)}
+.btn-soft{background:var(--card);color:var(--accent);border-color:transparent}
+.lnk{color:var(--accent);text-decoration:none;font-weight:500;transition:opacity .3s}
+.lnk:hover{opacity:.65}
+.img{display:inline-block;max-width:100%;height:auto;border-radius:20px;vertical-align:middle}
+.sticker{display:inline-block;font-size:64px;line-height:1;user-select:none}
+.sticker-img{display:inline-block;height:90px;width:auto;user-select:none;-webkit-user-drag:none}
+.drag{cursor:grab;touch-action:none}
+.card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:28px;
+backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%)}
+.card h3{margin-bottom:.35em}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+.card .ic{font-size:2.2rem;line-height:1;margin-bottom:.4em}
+.glass{background:var(--card);border:1px solid var(--border);border-radius:22px;
+backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%)}
+.box{padding:4px 0}
+.glass.box{padding:28px}
+.grid{display:grid;grid-template-columns:repeat(var(--cols,3),1fr);gap:20px}
+.grid>.n{display:flex;flex-direction:column}
+.grid>.n>*{flex:1}
+@media(max-width:720px){.grid{grid-template-columns:1fr}}
+.hero{padding:clamp(48px,12vh,120px) 24px;border-radius:28px}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem)}
+.hero p{font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--muted);max-width:46ch;margin:.5em auto 0}
+.sticky{position:sticky;top:12px;z-index:50;margin-bottom:16px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+padding:12px 22px;border-radius:30px;background:var(--card);border:1px solid var(--border);
+backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);
+box-shadow:0 8px 30px rgba(0,0,0,.10)}
+.nav b{font-size:1.05rem}
+.nav .links{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--text);text-decoration:none;padding:6px 14px;border-radius:980px;font-size:.95rem;
+transition:background .3s}
+.nav a:hover{background:var(--border)}
+.footer{text-align:center;color:var(--muted);font-size:.9rem;padding:48px 0 0}
+.hr{border:0;height:1px;background:var(--border);margin:32px 0}
+.list{padding-inline-start:1.3em;font-size:1.1rem}
+.list li{margin:.35em 0}
+.h-lift,.h-grow,.h-shrink,.h-glow,.h-tilt{transition:transform .5s var(--spring),box-shadow .5s var(--ease),filter .4s var(--ease)}
+.h-lift:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(0,0,0,.20)}
+.h-grow:hover{transform:scale(1.07)}
+.h-shrink:hover{transform:scale(.94)}
+.h-glow:hover{box-shadow:0 0 34px var(--accent);filter:brightness(1.1)}
+.h-tilt:hover{transform:rotate(-3deg) scale(1.06)}
+.rv{opacity:0;transition:opacity var(--dur,.9s) var(--ease) var(--delay,0s),
+transform var(--dur,.9s) var(--ease) var(--delay,0s),filter var(--dur,.9s) var(--ease) var(--delay,0s)}
+.rv.slide-up{transform:translateY(40px)}
+.rv.slide-down{transform:translateY(-40px)}
+.rv.slide-left{transform:translateX(60px)}
+.rv.slide-right{transform:translateX(-60px)}
+.rv.zoom{transform:scale(.88)}
+.rv.flip{transform:perspective(800px) rotateX(25deg) translateY(30px)}
+.rv.blur{filter:blur(14px);transform:scale(1.04)}
+.rv.in{opacity:1;transform:none;filter:none}
+.a-float{animation:float var(--dur,3.4s) ease-in-out var(--delay,0s) infinite}
+.a-pulse{animation:pulse var(--dur,2.2s) ease-in-out var(--delay,0s) infinite}
+.a-spin{animation:spin var(--dur,8s) linear var(--delay,0s) infinite}
+.a-bounce{animation:bounce var(--dur,1.4s) ease-in-out var(--delay,0s) infinite}
+.a-shake{animation:shake var(--dur,.8s) ease-in-out var(--delay,0s) infinite}
+.a-glow{animation:glow var(--dur,2.4s) ease-in-out var(--delay,0s) infinite alternate}
+.a-wiggle{animation:wiggle var(--dur,1.6s) ease-in-out var(--delay,0s) infinite}
+.a-rainbow{animation:rainbow var(--dur,6s) linear var(--delay,0s) infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}40%{transform:translateY(-24px)}60%{transform:translateY(-12px)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+@keyframes glow{from{filter:drop-shadow(0 0 2px var(--accent))}to{filter:drop-shadow(0 0 18px var(--accent))}}
+@keyframes wiggle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@keyframes rainbow{to{filter:hue-rotate(360deg)}}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@media(prefers-reduced-motion:reduce){
+*{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+.rv{opacity:1!important;transform:none!important;filter:none!important}}
+body{background:linear-gradient(135deg,#1b769c,#203a43,#2c5364);background-attachment:fixed}body{background-size:300% 300%;animation:pageIn .9s var(--ease) both,gradientShift 14s ease infinite}</style>
+<noscript><style>.rv{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
+</head>
+<body>
+<div class="page">
+<div class="n sticky rv slide-up"><nav class="nav"><b>Nova</b><div class="links"><a href="#top">الرئيسية</a><a href="#features">المميزات</a><a href="#contact">تواصل</a></div></nav></div><div class="n rv slide-down" style="text-align:center"><span class="sticker a-float drag" style="font-size:90px" role="img" aria-label="sticker">🚀</span></div><div class="n rv blur" id="top" style="text-align:center"><section class="hero glass"><h1>مرحبا بك في Nova</h1><p>لغة برمجة لبناء مواقع انيقة وسلسة بدون تعقيد</p></section></div><div style="height:16px"></div><div class="n rv slide-up" style="text-align:center"><div class="box"><div class="n inl rv slide-up"><a class="btn" href="#features">ابدأ الان</a></div><div class="n inl rv slide-up"><a class="btn btn-outline" href="https://github.com/mohamedoday/nova" target="_blank" rel="noopener">GitHub</a></div><div class="n inl rv slide-up"><a class="btn btn-soft" href="#themes">ثيمات</a></div></div></div><div style="height:60px"></div><div class="n rv slide-up" id="features" style="text-align:center"><h1 style="display:inline-block;background:linear-gradient(90deg,#00d4ff,#7b61ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent">المميزات</h1></div><div class="n rv slide-up"><div class="grid" style="--cols:3"><div class="n rv slide-up" style="--delay:0.00s"><div class="card h-lift"><div class="ic">🎨</div><h3>الوان</h3><p>ثيمات جاهزة وتدرجات لونية وصور خلفية</p></div></div><div class="n rv slide-up" style="--delay:0.08s"><div class="card h-lift"><div class="ic">✨</div><h3>حركات</h3><p>ظهور سلس وتاثيرات متحركة مثل ماك</p></div></div><div class="n rv slide-up" style="--delay:0.16s"><div class="card h-lift"><div class="ic">🔤</div><h3>خطوط</h3><p>خطوط عربية وانجليزية بسطر واحد</p></div></div></div></div><div style="height:60px"></div><div class="n rv slide-up" id="themes" style="text-align:center"><h1>صور وملصقات</h1></div><div class="n rv zoom" style="text-align:center"><img class="img h-grow" style="border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.28)" src="https://picsum.photos/900/400" alt="صورة" loading="lazy"></div><div style="height:20px"></div><div class="n rv slide-up" style="text-align:center"><div class="box"><div class="n inl rv slide-up"><span class="sticker a-pulse" style="font-size:56px" role="img" aria-label="sticker">🔥</span></div><div class="n inl rv slide-up" style="--delay:0.3s"><span class="sticker a-float" style="font-size:56px" role="img" aria-label="sticker">💎</span></div><div class="n inl rv slide-up" style="--delay:0.6s"><span class="sticker a-wiggle" style="font-size:56px" role="img" aria-label="sticker">⚡</span></div><div class="n inl rv slide-up"><span class="sticker a-bounce drag" style="font-size:56px" role="img" aria-label="sticker">🎮</span></div></div></div><div class="n rv slide-up" style="text-align:center"><p style="font-size:16px">جرب تسحب الملصق 🎮 بالماوس او اصبعك</p></div><div style="height:60px"></div><div class="n rv slide-up" style="text-align:center"><div class="box glass" style="border-radius:28px;padding:32px"><div class="n rv slide-up" id="contact"><h2 class="sub">تواصل معنا</h2></div><div class="n rv slide-up"><p>TELEGRAM:VSLLX</p></div><div class="n rv slide-up"><ul class="list"><li>الوان</li><li>صور</li><li>ملصقات</li><li>خطوط</li><li>حركات</li></ul></div></div></div><div class="n rv slide-up"><footer class="footer">صُنع بلغة Nova ❤</footer></div>
+</div>
+<script>
+(function(){
+var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});}
+else{
+var io=new IntersectionObserver(function(en){en.forEach(function(x){
+if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},
+{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(e){io.observe(e)});}
+document.querySelectorAll('.drag').forEach(function(el){
+var x=0,y=0,sx=0,sy=0,on=false;
+el.addEventListener('pointerdown',function(e){on=true;sx=e.clientX-x;sy=e.clientY-y;
+el.setPointerCapture(e.pointerId);el.style.cursor='grabbing';e.preventDefault();});
+el.addEventListener('pointermove',function(e){if(!on)return;x=e.clientX-sx;y=e.clientY-sy;
+el.style.translate=x+'px '+y+'px';});
+var up=function(){on=false;el.style.cursor='grab';};
+el.addEventListener('pointerup',up);el.addEventListener('pointercancel',up);
+});
+})();
+</script>
+</body>
+</html>
